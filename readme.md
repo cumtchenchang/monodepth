@@ -32,6 +32,9 @@ Make sure your first [download one of the pretrained models](#models) in this ex
 ```shell
 python monodepth_simple.py --image_path ~/my_image.jpg --checkpoint_path ~/models/model_cityscapes
 ```
+```
+python monodepth_simple.py --image_path 1311868164.363181.png --checkpoint_path models/model_kitti.meta
+```
 **Please note that there is NO extension after the checkpoint name**  
 
 ## Data
