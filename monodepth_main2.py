@@ -221,8 +221,8 @@ def test(params):
         # If you wish to resize the disparity map back to original size
         # disp = cv2.resize(disp, (1241, 376), interpolation=cv2.INTER_LINEAR)
         # Convert disparity to depth
-        depth = SCALE / disp
-        np.save(output_directory + '/' + 'depth_' + str(step) + '.npy', depth)
+        disp =  disp/SCALE
+        np.save(output_directory + '/' + 'depth_' + str(step) + '.npy', disp)
 
     print('done.')
 
