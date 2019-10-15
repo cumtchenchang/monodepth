@@ -81,6 +81,12 @@ python monodepth_main.py --mode test --data_path ~/data/KITTI/ \
 --filenames_file ~/code/monodepth/utils/filenames/kitti_stereo_2015_test_files.txt --log_directory ~/tmp/ \
 --checkpoint_path ~/tmp/my_model/model-181250
 ```
+## Generate depth map for SALM
+It saves the disparity maps as numpy (.npy) files in one folder (per sequence)
+```
+python monodepth_main2.py --mode test --data_path ~/data/dataset/sequence
+s/00/image_2/ --filenames_file ~/catkin_ws/src/CNN-SVO/monodepth/utils/filenames/kitti_mono_00.txt  --log_directory ~/tmp/ --checkpoint_path ~/catkin_ws/src/CNN-SVO/monodepth/models/model_kitti   --output_directory /home/SENSETIME/chenchang1/data/dataset/sequences/00/out_depth
+```
 **Please note that there is NO extension after the checkpoint name**  
 If your test filenames contain two files per line the model will ignore the second one, unless you use the `--do_stereo` flag.
 The network will output two files `disparities.npy` and `disparities_pp.npy`, respecively for raw and post-processed disparities.
